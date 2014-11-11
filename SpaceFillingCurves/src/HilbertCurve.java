@@ -44,6 +44,7 @@ public class HilbertCurve {
 			width = hsl * 3 + 2 * xi;
 			height = hsl * 3 + 2*yi;
 			System.out.println("Generating image at size "+width+"x"+height);
+			ui.setVisible(false);
 		}
 		
 		// set up  image
@@ -115,9 +116,12 @@ public class HilbertCurve {
 			ui.setImage(img);
 			ui.repaint();
 			ui.setVisible(true);
-		} else {
-			ui.setVisible(false);
 		}
+//		g.dispose();
+//		g = null;
+//		img = null;
+//		curve = null;
+//		System.gc();
 	}
 
 	public static String generateHilbertCurve(int iteration) {
